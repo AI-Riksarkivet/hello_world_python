@@ -1,12 +1,10 @@
 ARG UV_VERSION=latest
-ARG DEBIAN_VERSION=bookworm
 
 
 FROM ghcr.io/astral-sh/uv:$UV_VERSION AS uv
 
 
-FROM mcr.microsoft.com/vscode/devcontainers/base:$DEBIAN_VERSION
-LABEL maintainer="a5chin <a5chin.origin+contact@gmain.com>"
+FROM mcr.microsoft.com/devcontainers/base:jammy
 
 # hadolint ignore=DL3008
 RUN apt-get update \
