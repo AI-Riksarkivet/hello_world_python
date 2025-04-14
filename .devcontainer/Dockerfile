@@ -4,7 +4,7 @@ ARG UV_VERSION=latest
 FROM ghcr.io/astral-sh/uv:$UV_VERSION AS uv
 
 
-FROM mcr.microsoft.com/devcontainers/base:jammy
+FROM codercom/enterprise-base:ubuntu
 
 # hadolint ignore=DL3008
 RUN apt-get update \
@@ -15,4 +15,4 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-COPY --from=uv --chown=vscode: /uv /uvx /bin/
+COPY --from=uv --chown=coder: /uv /uvx /bin/
