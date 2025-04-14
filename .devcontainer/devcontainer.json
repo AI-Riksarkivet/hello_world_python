@@ -33,7 +33,7 @@
         "DISPLAY": "dummy",
         "PYTHONUNBUFFERED": "True",
         "UV_LINK_MODE": "copy",
-        "UV_PROJECT_ENVIRONMENT": "/home/coder/.venv"
+        "UV_PROJECT_ENVIRONMENT": "/workspaces/.venv"
     },
     "postCreateCommand": "uv sync --frozen",
     "postStartCommand": "uv run pre-commit install",
